@@ -52,12 +52,11 @@ public class NameFinderGuava {
     };
 
     public String findNameByComplicatedCondition(List<String> names) {
-        final FluentIterable<String> temp = FluentIterable.from(names)
+        return FluentIterable.from(names)
                 .filter(femaleNamePredicate)
                 .filter(longerThan5Predicate)
                 .filter(shorterThan8Predicate)
-                .filter(startWithCPredicate);
-        return temp
+                .filter(startWithCPredicate)
                 .first()
                 .transform(allToLowerCase)
                 .transform(firstToUpperCase)

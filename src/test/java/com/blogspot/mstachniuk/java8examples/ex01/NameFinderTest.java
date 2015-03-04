@@ -1,5 +1,6 @@
 package com.blogspot.mstachniuk.java8examples.ex01;
 
+import com.google.common.base.Stopwatch;
 import org.junit.Test;
 
 import java.util.List;
@@ -31,7 +32,9 @@ public class NameFinderTest {
     @Test
     public void shouldFindNameWithLambda() {
         System.out.println("Should Find Name With Lambda -------");
+        Stopwatch stopwatch = Stopwatch.createStarted();
         String result = nameFinderLambda.findNameByComplicatedCondition(names);
+        System.out.println("Execution time: " + stopwatch);
         assertThat(result).isEqualTo("Cecylia");
     }
 

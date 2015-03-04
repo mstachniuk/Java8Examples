@@ -23,12 +23,14 @@ public class NameFinderTest {
 
     @Test
     public void shouldFindNameWithGuava() {
+        System.out.println("Should Find Name With Guava -------");
         String result = nameFinderGuava.findNameByComplicatedCondition(names);
         assertThat(result).isEqualTo("Cecylia");
     }
 
     @Test
     public void shouldFindNameWithLambda() {
+        System.out.println("Should Find Name With Lambda -------");
         String result = nameFinderLambda.findNameByComplicatedCondition(names);
         assertThat(result).isEqualTo("Cecylia");
     }

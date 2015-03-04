@@ -11,6 +11,7 @@ public class NameFinderGuava {
     private Predicate<String> femaleNamePredicate = new Predicate<String>() {
         @Override
         public boolean apply(String input) {
+            System.out.println("female Name Predicate " + input);
             return input.endsWith("a");
         }
     };

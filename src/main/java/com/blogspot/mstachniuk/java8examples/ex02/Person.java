@@ -8,4 +8,8 @@ public interface Person {
     default String getFullName() {
         return getSurname() + " " + getLastName();
     }
+
+    static int getId() {
+        return 42;
+    }
 }
